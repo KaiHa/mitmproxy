@@ -1,0 +1,38 @@
+cabal-version:       >=1.10
+-- For documentation, see http://haskell.org/cabal/users-guide/
+
+name:                mitmproxy
+version:             0.1.0.0
+-- synopsis:
+-- description:
+-- bug-reports:
+-- license:
+license-file:        LICENSE
+author:              Kai Harries
+maintainer:          kai.harries@posteo.de
+-- copyright:
+-- category:
+build-type:          Simple
+extra-source-files:  CHANGELOG.md
+
+executable mitmproxy
+  main-is:             Main.hs
+  -- other-modules:
+  -- other-extensions:
+  ghc-options:         -threaded -Wall
+  build-depends:       base >=4.12
+                     , bytestring
+                     , connection
+                     , data-default
+                     , http-client
+                     , http-client-tls
+                     , http-conduit
+                     , http-proxy >=0.1.1
+                     , http-types
+                     , intro
+                     , optparse-applicative
+                     , tls
+                     , warp
+
+  -- hs-source-dirs:
+  default-language:    Haskell2010
